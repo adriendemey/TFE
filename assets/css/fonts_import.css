@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'caviar_dreamsbold';
+    font-family : 'caviar_dreamsbold';
     src: url('../fonts/Caviar_Dreams_Bold-webfont.eot');
     src: url('../fonts/Caviar_Dreams_Bold-webfont.eot?#iefix')                        format('embedded-opentype'),
          url('../fonts/Caviar_Dreams_Bold-webfont.woff')                              format('woff'),
@@ -19,7 +19,7 @@
     font-style  : normal;
 }
 @font-face {
-    font-family: 'caviar_dreamsitalic';
+    font-family : 'caviar_dreamsitalic';
     src: url('../fonts/CaviarDreams_Italic-webfont.eot');
     src: url('../fonts/CaviarDreams_Italic-webfont.eot?#iefix')                       format('embedded-opentype'),
          url('../fonts/CaviarDreams_Italic-webfont.woff')                             format('woff'),
@@ -29,7 +29,7 @@
     font-style  : normal;
 }
 @font-face {
-    font-family: 'caviar_dreamsregular';
+    font-family : 'caviar_dreamsregular';
     src: url('../fonts/CaviarDreams-webfont.eot');
     src: url('../fonts/CaviarDreams-webfont.eot?#iefix')                              format('embedded-opentype'),
          url('../fonts/CaviarDreams-webfont.woff')                                    format('woff'),
