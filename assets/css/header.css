@@ -1,0 +1,33 @@
+header {
+    height: 150px;
+    background-image: url(../images/head.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+/* Titre du site */
+header h1 {
+    /* Texte */
+    font-family: caviar_dreamsbold;
+    color: #ffffff;
+    font-size: 35px;
+    /* Boîte */
+    display: inline-block;
+    background-color: #774D73;
+    padding-right: 2em;
+    padding-left: 30px;
+    margin-left: -30px;
+}
+header h1::before {
+    display: inline-block;
+    position: relative;
+    right: 30px;
+    top: 45px;
+    content: ".";
+    color: transparent;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    margin-right: -20px;
+    border-color: transparent #51314F transparent transparent;
+}
