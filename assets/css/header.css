@@ -31,3 +31,24 @@ header h1::before {
     margin-right: -20px;
     border-color: transparent #51314F transparent transparent;
 }
+nav {
+    margin-top: -4px;
+}
+nav a {
+    font-family: caviar_dreamsbold;
+    text-align: center;
+    color: #774D73;
+    text-decoration: none;
+    background-color: #faebf4;
+    padding: 3px;
+    transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: #ddb8d8;
+}
+nav:hover a[href="#"] {
+    background-color: #faebf4;
+}
+nav a[href="#"], nav a[href="#"]:hover {
+    background-color: #ddb8d8;
+}
