@@ -1,0 +1,7 @@
+footer {
+    height: 50px;
+    background-image: url(../images/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
