@@ -1,4 +1,6 @@
 footer {
+    position: absolute;
+    bottom: 0px;
     height: 50px;
     background-image: url(../images/footer.jpg);
     background-size: cover;

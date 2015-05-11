@@ -26,7 +26,7 @@ $config['base_url']	= 'http://root/BES2/tfe/';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -224,7 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-$config['encryption_key'] = '4b1650D3d9tjCLsDpbZNKVJuWPT06Aai';
+$config['encryption_key'] = 'c57vl79Dft071i21pAs5vd8y47neIHEs';
 
 /*
 |--------------------------------------------------------------------------

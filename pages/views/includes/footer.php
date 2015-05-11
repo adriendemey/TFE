@@ -1,4 +1,4 @@
-        <footer  class="grid-100">
+        <footer class="grid-100">
             
         </footer>
     </div>

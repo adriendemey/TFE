@@ -1,0 +1,7 @@
+nav a[href="admin/logout"] {
+    background-color: #ffd3d3;
+}
+nav a[href="admin/logout"]:hover {
+    background-color: #ff6060;
+    color: #ffffff;
+}
