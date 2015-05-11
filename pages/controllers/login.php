@@ -7,7 +7,7 @@ class Login extends CI_Controller {
     function index() {
         $this->load->library('form_validation');
         $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-        // Utilisation d'un callback pour checker si le mot de passe est correct
+        // Utilisation d'un callback. Lance la fonction check_database (plus bas dans ce fichier)
         $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_database');
 
         if($this->form_validation->run() == FALSE) {
@@ -21,6 +21,7 @@ class Login extends CI_Controller {
     }
     function check_database($password) {
         // Si les champs sont correctement complétés, cette fonction est appellée dans la règle pour le champ password.
+        // Cette fonction renvoie TRUE si une ligne 
         
         // On récupère la valeur du champ username :
         $username = $this->input->post('username');
@@ -29,12 +30,11 @@ class Login extends CI_Controller {
 
         if($result) {
             // Si username et password concordent, une variable de session est créée :
-            // Dans ce cas, je prévois le cas où l'utilisateur serait enregistré plusieurs fois dans la BDD
             $sess_array = array();
             foreach($result as $row) {
                 $sess_array = array(
-                    'id' => $row->id,
-                    'username' => $row->username
+                    'id' => $row['id'],
+                    'username' => $row['username']
                 );
                 $this->session->set_userdata('logged_in', $sess_array);
             }

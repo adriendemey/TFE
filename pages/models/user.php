@@ -1,24 +1,21 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-Class User extends CI_Model
-{
- function login($username, $password)
- {
-   $this -> db -> select('id, username, password');
-   $this -> db -> from('users');
-   $this -> db -> where('username', $username);
-   $this -> db -> where('password', MD5($password));
-   $this -> db -> limit(1);
- 
-   $query = $this -> db -> get();
- 
-   if($query -> num_rows() == 1)
-   {
-     return $query->result();
-   }
-   else
-   {
-     return false;
-   }
- }
+class User extends MY_Model {
+    function __construct() {
+        parent::__construct();
+        $this->table_name = 'users';
+        $this->primary_key = 'id';
+        $this->table_order = 'id DESC';
+    }
+    function login($username, $password) {
+        // Cette requête renvoie tout les résultats où username=$username et password=$password.
+        // NULL est là car j'utilise un array pour passer mes critères,
+        // Le premier FALSE signifie que je souhaite utiliser la méthode ET pour orwhere
+        $getby = $this->get_by(array('username' => $username,'password' => md5($password)),NULL, FALSE, FALSE);
+        if(count($getby) == 1) {
+            return $getby;
+        } else {
+            return false;
+        }
+    }
 }
 ?>

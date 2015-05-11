@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
     function logout() {
         $this->session->unset_userdata('logged_in');
         session_destroy();
-        redirect('index', 'refresh');
+        redirect('/', 'refresh');
     }
     function login() {
         $this->load->helper(array('form'));
